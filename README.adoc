@@ -3,8 +3,7 @@ Demonstrates the memory leak in a simple Spring Boot app that kills JVM when inv
 new process when memory leak occurs.
 
 ## To build and deploy
-
-~~~
+```
 mvn clean install
 cf push
-~~~
+```
