@@ -4,6 +4,6 @@ new process when memory leak occurs.
 
 ## To build and deploy
 ```
-mvn clean install
+mvn clean instal
 cf push
 ```
