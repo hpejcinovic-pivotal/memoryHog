@@ -1,0 +1,6 @@
+---
+applications:
+- name: memoryHog
+  memory: 256M
+  instances: 1
+  path: target/gs-rest-service-0.1.0.jar
