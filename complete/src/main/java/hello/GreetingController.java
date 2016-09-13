@@ -13,7 +13,6 @@ public class GreetingController {
 	private static final String template = "Hello, %s!";
 	private final AtomicLong counter = new AtomicLong();
 	private static ArrayList<Long[]> al = new ArrayList<Long[]>();
-	private static Instrumentation instrumentation;
 
 	@RequestMapping("/greeting")
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
@@ -27,9 +26,6 @@ public class GreetingController {
 			System.out.println("before:" + humanReadableByteCount());
 			final Long[] ar = new Long[Integer.MAX_VALUE/100];
 			al.add(ar);
-			long objectSize = instrumentation.getObjectSize(al);
-			System.out.println("object size in bytes:"+ objectSize);
-			System.out.println("object size in MB:"+ objectSize/1000000);
 			
 			after = humanReadableByteCount();
 			System.out.println("after:" + after);
