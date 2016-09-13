@@ -1,6 +1,9 @@
+
 Demonstrates the memory leak in a simple Spring Boot app that kills JVM when invoked via REST endpoint and how PCF creates a
 new process when memory leak occurs.
 
-To build and deploy
+## To build and deploy
+~~~
 mvn clean install
 cf push
+~~~
